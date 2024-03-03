@@ -2,11 +2,8 @@
 
 * Name: CM Questions and Answers
 * Contributors: CreativeMindsSolutions
-* Donate link: http://www.cminds.com/
-* Tags: question, answer, questions answer,forum, q&a
-* Requires at least: 5.4.0
-* Tested up to: 6.4
-* Stable tag: 3.2.3
+* Minimum WordPress version: 5.4.0
+* Tested up to WordPress version: 6.4
 
 ## Introduction
 
