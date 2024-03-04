@@ -17,7 +17,7 @@ Boost your WordPress site with CM Answers, an all-encompassing Q&A plugin that i
 
 ### Plugin Installation
 
-> [Detailed User Guide](https://creativeminds.helpscoutdocs.com/category/987-answers-cma)
+> [User Guide](https://creativeminds.helpscoutdocs.com/category/987-answers-cma)
 
 * Upload the plugin folder to the /wp-content/plugins/ directory.
 * Go to the ‘Plugins’ menu in WordPress and activate the plugin.
@@ -69,7 +69,7 @@ As an admin, you have the ability to oversee questions and answers while also ge
 
 <details><summary> <b>Expand</b> </summary>
 
-> [Pro Version Detailed Features List](https://www.cminds.com/cm-answer-store-page-content/#features) )
+> [Pro Version Detailed Features List](https://www.cminds.com/cm-answer-store-page-content/#features) | [Demo](https://www.answersplugin.com/cm-answers-demo-main-menu/)
 
 * **Mobile Optimization**: Tailored design for mobile user experience.
 * **Anonymous Contributions**: Allows unregistered users to post anonymously with an additional add-on.
