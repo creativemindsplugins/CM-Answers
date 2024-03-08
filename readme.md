@@ -124,7 +124,7 @@ As an admin, you have the ability to oversee questions and answers while also ge
 
 *  [CM MicroPayments](https://www.cminds.com/wordpress-plugins-library/micropayments/)
 *  [CM Answers Anonymous User Posting](https://www.cminds.com/wordpress-plugins-library/cm-answer-anonymous-user-posting-cm-plugins-store/)
-*  [PeepSo Addon for Cm Answers](https://www.cminds.com/wordpress-plugins-library/cm-answers-peepso-social-network-integration-addon-for-wordpress/)
+*  [PeepSo Addon for CM Answers](https://www.cminds.com/wordpress-plugins-library/cm-answers-peepso-social-network-integration-addon-for-wordpress/)
 *  [CM Ask the Expert](https://www.cminds.com/wordpress-plugins-library/ask-the-expert-wordpress-plugin-by-creativeminds/)
 *  [CM Answers Idea Stimulator](https://www.cminds.com/wordpress-plugins-library/cm-answers-idea-stimulator-ideations-addon/)
 *  [CM Answers Widgets](https://www.cminds.com/wordpress-plugins-library/purchase-cm-answers-widgets-add-on-for-wordpress/)
