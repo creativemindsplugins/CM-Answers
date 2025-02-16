@@ -9,6 +9,8 @@
 
 [Pro Plugin Page](https://www.cminds.com/cm-answer-store-page-content/) | [Videos](https://www.videolessonsplugin.com/video-lesson/lesson/questions-answers-plugin/)  | [Demo](https://www.answersplugin.com/cm-answers-demo-main-menu/) | [User Guide](https://creativeminds.helpscoutdocs.com/category/987-answers-cma) | [AddOns](https://www.cminds.com/wordpress-plugins-library/?showfilter=No&tags=AnswerAddOn) 
 
+⭐ Introducing the 2025 edition of CM Answers! With 20+ new features and over 50 customizable front-end labels, you can now personalize your Q&A forum like never before.
+
 **Our WordPress Q&A plugin allows users to easily submit and respond to questions.**
 
 Boost your WordPress site with CM Answers, an all-encompassing Q&A plugin that integrates seamlessly into your site. Perfect for setting up a dedicated Q&A network like StackOverflow or Quora, or just to enhance a page, it comes packed with features such as multilingual support, voting, moderation, tailored notifications, access control, flexible shortcodes, and reCAPTCHA for secure user interactions.
@@ -56,11 +58,18 @@ As an admin, you have the ability to oversee questions and answers while also ge
 
 <details><summary> <b>Expand</b> </summary>
 
-* Tracks the number of views and answers.
+* Tracks the number of views, answers and ratings.
+* Allows admin to specify who can ask questions based on user role.
 * Allows administrators to oversee questions and answers, with the option for email alerts.
 * Enables users to get notified about pending answers to their questions.
 * Offers sorting capabilities within the forum for efficient navigation.
+* Supports sorting answers in ascending or descending order.
+* AJAX support.
 * Provides a customizable template to fit user preferences.
+* Provides a login form for non-logged-in users.
+* Supports displaying a Gravatar near the user’s name.
+* Customizable front-end labels.
+* Setup Wizard helps configure the plugin quickly and easily.
 * Welcomes the addition of more language files to cater to our diverse WP community, with existing support for Spanish, German, Polish, Russian, French, and Czech.
 
 </details>
@@ -85,7 +94,6 @@ As an admin, you have the ability to oversee questions and answers while also ge
 * **Content Editing**: Users can revise their submitted questions and answers.
 * **BuddyPress Compatibility**: Enhanced integration with the BuddyPress platform.
 * **Advanced Category Navigation**: Supports two-tier category navigation.
-* **Ajax-Enabled Shortcodes**: Utilizes Ajax for displaying categories that align with the site’s design.
 * **Social Media Integration**: Allows registration and interaction using Facebook and LinkedIn profiles. [View Image](http://www.cminds.com/wp-content/uploads/edd/image1.png), [See another image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image2.png)
 * **Shortcodes**: Create a list of questions on your site using the cma-questions shortcode, which can be customized with parameters like limit=10 author=123 sort=hottest.
 * **User Dashboard**: Enhance user profiles with personalized dashboards for their questions and answers using the cma-my-questions and cma-my-answers shortcodes. [View Image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image3.png)
@@ -95,13 +103,9 @@ As an admin, you have the ability to oversee questions and answers while also ge
 * **Show/Hide Views**: Administrator can choose to hide or show the number of views that a topic has via the Questions and Answers plugin settings. [View Image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image6.png)
 * **Moderation Feature**: Administrators have the ability to specify which users are allowed to post content without requiring moderation. [View Image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image7.png)
 * **Multisite Compatibility**: The plugin works across multiple WordPress sites.
-* **Gravatar Display**: It can show a user’s Gravatar next to their name and on their profile page.
-* **Answer Sorting**: Allows sorting of answers in either ascending or descending order.
 * **File Attachments**: Users can attach files to their questions with specific type and size restrictions.
-* **Localized Interface**: The user-facing side of the plugin is available in multiple languages.
 * **View Count Options**: Offers the ability to count views based on individual views or sessions.
 * **Public Profiles**: Creates a public profile for users that showcases their questions and answers and includes links to their social media profiles.[View Image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image8.png)
-* **No Footer Message**: The footer does not display our thank-you note.
 * **Tagging System**: Fully functional tagging within the plugin, with tag appearance managed via a widget.
 * **Pinned Questions**: Enables the pinning of questions to the top with customizable background colors.
 * **Code Formatting**: Allows for the inclusion of code snippets with the option for a personalized background color.
@@ -115,6 +119,7 @@ As an admin, you have the ability to oversee questions and answers while also ge
 * **Expert Directory Linking**: Links user profiles with expert profiles from CM Expert Directory and synchronizes categories.
 * **GamiPress Rewards**: Rewards users for various forum activities.
 * **ChatGPT Functionality**: Supports the automatic generation of answers in chosen categories using ChatGPT.
+* **Gemini Functionality**: Supports the automatic generation of answers in chosen categories using Gemini.
 
 </details>
 
