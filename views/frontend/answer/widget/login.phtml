@@ -1,0 +1,1 @@
+<div class="cma-login">    <?php echo CMA_Labels::getLocalized('please_login_to_post_questions'); ?>:<br />    <div class="cma-login-wp"><?php wp_login_form(); ?></div>    <?php if( get_option('users_can_register') ) {		echo sprintf('<p><a href="%s">%s</a></p>', esc_attr(wp_registration_url()), CMA_Labels::getLocalized('register_link'));	} ?></div>

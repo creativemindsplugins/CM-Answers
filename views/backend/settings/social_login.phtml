@@ -1,0 +1,59 @@
+<div class="cm-settings-collapse-toggle">Toggle all</div>
+<?php if ( !ini_get('allow_url_fopen') ): ?>
+    <span style="color:red"><?php echo CMA_Settings::__('Your server configuration needs to be changed to allow social login. Please enable allow_url_fopen in your global php.ini file on the server.'); ?></span>
+<?php endif; ?>
+<div class="cma-settings-section settings_social_login_facebook">
+    <h3 class="cm-settings-collapse-btn">
+        <span class="dashicons dashicons-arrow-down"></span>
+        <strong>Facebook</strong>
+    </h3>
+    <div class="cm-settings-collapse-container cm-settings-collapse-open onlyinpro" style="opacity:0.7">
+        <p>Instructions are available here: <a
+                    href="https://creativeminds.helpscoutdocs.com/article/988-cm-answers-cma-social-login-facebook/"
+                    target="_blank">​https://creativeminds.helpscoutdocs.com/article/988-cm-answers-cma-social-login-facebook</a>
+        </p>
+        <p>Redirect URI: <?php echo site_url(); ?>/auth/facebook/int_callback</p>
+        <div class="cm-settings-row">
+            <div class="cm-settings-option-name">App ID:</div>
+            <div class="cm-settings-control"><input type="text" name="fb_app_id"
+                                                    value="<?php echo esc_attr($fb_app_id); ?>" disabled/></div>
+            <div class="cm-settings-desc">
+                <?php echo CMA_SettingsView::renderOnlyin('Pro'); ?>
+            </div>
+        </div>
+        <div class="cm-settings-row">
+            <div class="cm-settings-option-name">App Secret:</div>
+            <div class="cm-settings-control"><input type="text" name="fb_app_secret"
+                                                    value="<?php echo esc_attr($fb_app_secret); ?>" disabled/></div>
+            <div class="cm-settings-desc"><?php echo CMA_SettingsView::renderOnlyin('Pro'); ?></div>
+        </div>
+    </div>
+</div>
+
+<div class="cma-settings-section settings_social_login_google">
+    <h3 class="cm-settings-collapse-btn">
+        <span class="dashicons dashicons-arrow-down"></span>
+        <strong>Google</strong>
+    </h3>
+    <div class="cm-settings-collapse-container cm-settings-collapse-open onlyinpro" style="opacity:0.7">
+        <p>Instructions are available here: <a
+                    href="https://creativeminds.helpscoutdocs.com/article/990-cm-answers-cma-social-login-google/"
+                    target="_blank">​https://creativeminds.helpscoutdocs.com/article/990-cm-answers-cma-social-login-google</a>
+        </p>
+        <p>Redirect URI: <?php echo site_url(); ?>/auth/google/oauth2callback</p>
+        <p>Authorized JavaScript origins: <?php echo site_url() ?></p>
+        <div class="cm-settings-row">
+            <div class="cm-settings-option-name">Client ID:</div>
+            <div class="cm-settings-control"><input type="text" size="60" name="google_client_id"
+                                                    value="<?php echo esc_attr($google_client_id); ?>" disabled/></div>
+            <div class="cm-settings-desc"><?php echo CMA_SettingsView::renderOnlyin('Pro'); ?></div>
+        </div>
+        <div class="cm-settings-row">
+            <div class="cm-settings-option-name">Client Secret:</div>
+            <div class="cm-settings-control"><input type="text" size="60" name="google_client_secret"
+                                                    value="<?php echo esc_attr($google_client_secret); ?>" disabled/>
+            </div>
+            <div class="cm-settings-desc"><?php echo CMA_SettingsView::renderOnlyin('Pro'); ?></div>
+        </div>
+    </div>
+</div>

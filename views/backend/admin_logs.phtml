@@ -1,0 +1,30 @@
+<div class="wrap">
+    <h2><?php _e('Logs', 'cma-answers'); ?></h2>
+    <?php echo CMA_BaseController::getAdminNav(); ?>
+    <div class="clear"></div>
+<h1>PRO plan offers:</h1>
+<p style="font-size:16px; max-width:65%;">The Logs feature allows administrators to effectively monitor and analyze activity within the Q&A forum. With tools for visualizing and exporting data, it simplifies tracking user interactions and ensuring platform integrity.</p>
+    <div style="float:left; width:100%; margin-bottom:30px;">
+        <div style="text-align:center; width:350px; float:left; margin-right:20px;">
+            <a href="<?php echo CMA_URL . '/views/resources/imgs/cm-answers-logs-logs-table.png'; ?>" target="_blank" style="text-decoration:none;">
+                <img src="<?php echo CMA_URL . '/views/resources/imgs/cm-answers-logs-logs-table.png'; ?>" alt="" style="width:100%; border:1px solid #444;" />
+            </a>
+            <span style="font-size:15px;">Logs table</span>
+        </div>
+        <div style="text-align:center; width:350px; float:left; margin-right:20px;">
+            <a href="<?php echo CMA_URL . '/views/resources/imgs/cm-answers-logs-graph.png'; ?>" target="_blank" style="text-decoration:none;">
+                <img src="<?php echo CMA_URL . '/views/resources/imgs/cm-answers-logs-graph.png'; ?>" alt="" style="width:100%; border:1px solid #444;" />
+            </a>
+            <span style="font-size:15px;">Graph</span>
+        </div>
+    </div>
+<br>
+<h3>Upgrade to Pro for:</h3>
+<ul style="font-size:16px;">
+    <li><svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="color:#008000; width:15px;"><path d="M12 4.5v15m7.5-7.5h-15" stroke-linecap="round" stroke-linejoin="round"></path></svg> Accessing detailed logs of posted questions, answers, and votes.</li>
+    <li><svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="color:#008000; width:15px;"><path d="M12 4.5v15m7.5-7.5h-15" stroke-linecap="round" stroke-linejoin="round"></path></svg> Viewing activity trends with graphical representations.</li>
+    <li> <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="color:#008000; width:15px;"><path d="M12 4.5v15m7.5-7.5h-15" stroke-linecap="round" stroke-linejoin="round"></path></svg> Exporting logs to CSV for reporting or further analysis.</li>
+</ul>
+<br>
+<a href="<?php echo admin_url('admin.php?page=cma_pro'); ?>" style="font-size: 16px; line-height: 20px; font-weight: 500; padding: 10px 30px; background-color: #008000; border-color: #008000; color: #fff; text-decoration:none;">Upgrade to Pro</a>
+</div>

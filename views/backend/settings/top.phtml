@@ -1,0 +1,130 @@
+<div style="display:grid; grid-template-columns: 80% 20%;">
+    <div>
+        <?php if (!CMA_Settings::getOption(CMA_Settings::OPTION_ANSWER_PAGE_DISABLED)): ?>
+        <p><?php echo CMA_Settings::__('Link to questions frontend list:'); ?> <a
+                    href="<?php echo esc_attr(CMA::permalink());
+                    ?>" target="_blank"><?php echo esc_html(CMA::permalink()); ?></a></p>
+        <?php endif;
+        if ( $ajaxPage = CMA_Shortcodes::getCustomQuestionsIndexPage($publish = true) ): ?>
+            <p><?php echo CMA_Settings::__('Link to questions frontend list (AJAX):'); ?> <a
+                        href="<?php $url = get_permalink($ajaxPage->ID);
+                        echo esc_attr($url);
+                        ?>" target="_blank"><?php echo esc_html($url); ?></a> (<a
+                        href="<?php echo get_edit_post_link($ajaxPage->ID);
+                        ?>"><?php echo CMA_Settings::__('Edit page'); ?></a>)</p>
+        <?php endif; ?>
+    </div>
+    <div style="align-content: end;">
+        <form method="post">
+            <div style="float:right; margin-bottom: 15px;">
+                <input onclick="jQuery('.cm-settings-row:has(.onlyinpro), .onlyinpro, label:has(input[disabled])').toggleClass('hide'); return false;"
+                       type="submit" name="cmtt_toggleProOptions" value="Show/hide Pro options"
+                       class="button cmtt-cleanup-button"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<?php do_action('cma_settings_top'); ?>
+
+<style type="text/css">
+#tabs {clear: right;}
+#cm-answers-settings-form table {border-spacing:0; width: 100%;}
+#cm-answers-settings-form tr td, #cm-answers-settings-form tr th {padding:10px; border-bottom: solid 1px #f0f0f0; width: 30%;}
+#cm-answers-settings-form tr th[colspan] {width: 100% !important;}
+#cm-answers-settings-form table td input[type=text] {width: 90%; min-width: 100px; max-width: 300px;}
+#cm-answers-settings-form table th {padding-left: 20px; font-weight: normal; text-align: right; vertical-align: top;}
+#cm-answers-settings-form table td {vertical-align: top;}
+#cm-answers-settings-form caption {color: #222; font: 600 1.3em verdana; margin: 1em 0; text-align: left;}
+#cm-answers-settings-form tr:last-child td, #cm-answers-settings-form tr:last-child th {border-bottom: none}
+#cm-answers-settings-form label {margin-right: 2em;}
+#cm-answers-settings-form .multiline label {display: block; margin-right: 0 !important;}
+textarea.cma-custom-css {width: 100%; height: 200px;}
+#cm-answers-settings-form .tg-table-plain td, #cm-answers-settings-form .tg-table-plain th { border: 1px #555 solid; padding: 5px;border-collapse: collapse;text-align: center;vertical-align: middle; }
+#cm-answers-settings-form .cma-tab-content ul {list-style: circle; margin: 1em 0 1em 30px;}
+#cm-answers-settings-form .cma-tab-content .select2 ul {list-style: none;}
+#cm-answers-settings-form td ul, #cm-answers-settings-form td li {margin-top: 0 !important; padding: 0; list-style: disc;}
+.server-info-table td:nth-child(3) {}
+.server-info-table span {color: green; font-weight: bold;}
+.server-info-table strong {color: red; font-weight: bold;}
+h4 {font-weight: bold; margin: 2em 0 0.3em 0;}
+#authorsAutoApprovedResults {list-style: none; margin: 0 0 0 100px !important; margin-top: -14px; border:solid 1px #ccc; padding:5px !important; width:190px; display: none;}
+#authorsAutoApprovedResults li {list-style: none !important; margin: 0; padding: 0;}
+#authorsAutoApprovedSearch {width: 200px;}
+.cma-frontend-link {font-size: 120%;}
+.cma-warning {border: 1px solid #dddddd; border-left: 4px solid #ff9900; font-size: 90%; margin: 5px 0 15px; padding: 1px 12px;}
+.cma-warning p {margin: .5em 0; padding: 2px;}
+.ac_results { padding: 0.3em; margin: 0; list-style: none; position: absolute; z-index: 10000; display: none; border-width: 1px; border-style: solid; background: white; }
+.cma-shortcodes {display: none;}
+.ac_results li { padding: 2px 5px; white-space: nowrap; text-align: left; }
+.ac_over { cursor: pointer; }
+.ac_match { text-decoration: underline; }
+.cm-licensing-box {margin-top:-20px;}
+</style>
+<script type="text/javascript">
+jQuery(function ($) {
+	jQuery('#tabs').tabs();
+	jQuery('#tabs ul[role=tablist] a').click(function() {
+		var tab = this.href.substr(this.href.lastIndexOf('#')+1, this.href.length).replace(/_/g, '-');
+		location.hash = tab;
+		$('#cm-answers-settings-form input[name=tab]').val(tab);
+		this.blur();
+	});
+	jQuery('#tabs ul[role=tablist] a[href="'+ location.hash.replace(/\-/g, '_') +'"]').click();
+
+	jQuery('input[name="accessView"]').on('click cmaShowHide', function(){
+		if(jQuery(this).val() === '2' && jQuery(this).is(':checked'))
+		{
+			jQuery('#accessViewRoles').show();
+		}
+		else
+		{
+			jQuery('#accessViewRoles').hide();
+		};
+	}).trigger('cmaShowHide');
+
+	jQuery('input[name="accessPostQuestions"]').on('click cmaShowHide', function(){
+		if(jQuery(this).val() === '2' && jQuery(this).is(':checked'))
+		{
+			jQuery('#accessPostQuestionsRoles').show();
+		}
+		else
+		{
+			jQuery('#accessPostQuestionsRoles').hide();
+		};
+	}).trigger('cmaShowHide');
+
+	jQuery('input[name="accessPostAnswers"]').on('click cmaShowHide', function(){
+		if(jQuery(this).val() === '2' && jQuery(this).is(':checked'))
+		{
+			jQuery('#accessPostAnswersRoles').show();
+		}
+		else
+		{
+			jQuery('#accessPostAnswersRoles').hide();
+		};
+	}).trigger('cmaShowHide');
+
+	$('.settings_access_control select[multiple][name*="_roles"]').each(function() {
+		var obj = $(this);
+		var byRole = <?php echo CMA_Settings::ACCESS_ROLE; ?>;
+		var container = obj.parents('tr');
+		var select = container.prev().find('select[name="'+ obj.attr('name').replace('_roles[]', '') +'"]');
+		if (select.length == 1) {
+			if (select.val() == byRole) {
+				container.show();
+			} else {
+				container.hide();
+			}
+			select.change(function() {
+				if (select.val() == byRole) {
+					container.show();
+				} else {
+					container.hide();
+				}
+			});
+		}
+	});
+	
+});
+</script>

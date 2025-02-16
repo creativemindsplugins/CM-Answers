@@ -1,0 +1,35 @@
+<div class="cm-settings-collapse-toggle">Toggle all</div>
+<?php
+
+$labelsByCategories = CMA_Labels::getLabelsByCategories();
+
+foreach ($labelsByCategories as $category => $labels):
+
+	?>
+<div class="cma-settings-section settings_labels_<?php echo $category; ?>">
+	<h3 class="cm-settings-collapse-btn">
+		<span class="dashicons dashicons-arrow-down"></span>
+		<strong><?php echo (empty($category) ? CMA_Settings::__('Other') : $category); ?></strong>
+	</h3>
+	<div class="cm-settings-collapse-container cm-settings-collapse-open"><?php
+
+	foreach ($labels as $key):
+		
+		$default = CMA_Labels::getDefaultLabel($key);
+        $available = CMA_Labels::isAvailable($key)
+		?>
+	
+		<div class="cm-settings-row">
+	        <div class="cm-settings-option-name">"<?php echo esc_html($key) ?>" label:</div>
+	        <div class="cm-settings-control"><input type="text" size="60" name="label_<?php echo esc_attr($key); ?>"
+	        	value="<?php echo esc_attr(CMA_Labels::getLabel($key)); ?>"
+	        	placeholder="<?php echo esc_attr($default) ?>" <?php echo $available ? '' : 'disabled'; ?>/></div>
+	        <div class="cm-settings-option-desc"><?php echo $available ? CMA_Labels::getDescription($key) : CMA_SettingsView::renderOnlyin('Pro'); ?></div>
+	    </div>
+		    
+	<?php endforeach; ?>
+	</div>
+</div>
+<?php endforeach; ?>
+
+<?php echo apply_filters('cma-settings-category', '', 'labels'); ?>

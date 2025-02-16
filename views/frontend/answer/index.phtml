@@ -1,0 +1,274 @@
+<?php
+
+if ( wp_is_block_theme() ) {
+    $header = do_shortcode(do_blocks('<!-- wp:template-part {"slug":"header","tagName":"header"} /-->'));
+    $footer = do_shortcode(do_blocks('<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->'));
+    wp_head();
+    echo $header;
+} else {
+    get_header();
+}
+
+?>
+
+<div id="primary" class="site-content cma-content">
+
+    <div class="cma-main">
+
+        <div class="cma-wrapper">
+
+            <div id="content" role="main" class="entry-content">
+
+                <header class="entry-header">
+
+                    <h1 class="entry-title">
+
+                        <?php _e('All Questions', 'cm-answers'); ?>
+
+                    </h1>
+
+                </header>
+
+                <div style="clear:both;height:15px;"></div>
+
+
+
+                <?php
+                if ( CMA_Settings::getOption(CMA_Settings::OPTION_SHOW_INDEX_ORDER) ) {
+                $currentSort = !empty($_GET['sort']) ? $_GET['sort'] : CMA_Settings::getOption(CMA_Settings::OPTION_INDEX_ORDER_BY);
+
+                if (!ctype_alnum($currentSort)) $currentSort = 'newest';
+
+                ?>
+
+                <ul class="cma-thread-orderby">
+
+                    <li<?php if( $currentSort == 'newest' ): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo esc_attr(add_query_arg(array('sort' => 'newest'), get_pagenum_link(0))); ?>"><?php echo CMA_Labels::getLocalized('orderby_newest'); ?></a></li>
+
+                    <li<?php if( $currentSort == 'hottest' ): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo esc_attr(add_query_arg(array('sort' => 'hottest'), get_pagenum_link(0))); ?>"><?php echo CMA_Labels::getLocalized('orderby_hottest'); ?></a></li>
+
+                    <?php if( CMA_AnswerThread::isRatingAllowed() ): ?><li<?php if( $currentSort == 'votes' ): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo esc_attr(add_query_arg(array('sort' => 'votes'), get_pagenum_link(0))); ?>"><?php echo CMA_Labels::getLocalized('orderby_votes'); ?></a></li><?php endif; ?>
+
+                    <li<?php if( $currentSort == 'views' ): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo esc_attr(add_query_arg(array('sort' => 'views'), get_pagenum_link(0))); ?>"><?php echo CMA_Labels::getLocalized('orderby_views'); ?></a></li>
+
+                </ul>
+                <?php } ?>
+                <div class="cma-clear"></div>
+
+                <?php
+
+                do_action('CMA_show_messages');
+
+                if( have_posts() ):
+
+                    ?>
+
+                    <table class="cma-thread-list">
+
+                        <?php
+
+                        while(have_posts()):
+
+                            the_post();
+
+                            $thread = CMA_AnswerThread::getInstance($post->ID);
+
+                            ?>
+
+                            <tr><?php if( CMA_AnswerThread::isRatingAllowed() && CMA_Settings::getOption(CMA_Settings::OPTION_COLUMN_VOTES_ENABLED)): ?><td class="cma-thread-meta">
+
+                                        <div class="cma-thread-numbers cma-thread-votes"><div class="cma-thread-numbers-count cma-thread-votes-count"><?php
+
+                                                $votes = $thread->getVotes();
+
+                                                echo $votes;
+
+                                                ?></div><div class="cma-thread-numbers-caption cma-thread-votes-caption"><?php
+
+                                                echo CMA_Labels::n(strtolower(CMA_Labels::getLabel('vote')), strtolower(CMA_Labels::getLabel('votes')), $votes);
+
+                                                ?></div></div></td><?php endif; ?>
+                            <?php if( CMA_Settings::getOption(CMA_Settings::OPTION_VIEWS_ALLOWED)): ?>
+                                <td class="cma-thread-meta"><div class="cma-thread-numbers cma-thread-views"><div class="cma-thread-numbers-count cma-thread-views-count"><?php
+
+                                            $views = $thread->getViews();
+
+                                            echo $views;
+
+                                            ?></div><div class="cma-thread-numbers-caption cma-thread-views-caption"><?php
+
+                                        echo CMA_Labels::n(strtolower(CMA_Labels::getLabel('view')), strtolower(CMA_Labels::getLabel('views')), $views);
+
+                                        ?></div></div></td><?php endif; ?>
+                            <?php if( CMA_Settings::getOption(CMA_Settings::OPTION_ANSWERS_ALLOWED)): ?>
+
+                                    <?php $numberOfAnswers = $thread->getNumberOfAnswers(); ?>
+
+                                <td class="cma-thread-meta"><div class="cma-thread-numbers cma-thread-answers<?php
+
+                                	if( $numberOfAnswers == 0 ): ?> cma-thread-no-answers<?php endif; ?>">
+
+                                	<div class="cma-thread-numbers-count cma-thread-answers-count"><?php echo $numberOfAnswers; ?></div>
+
+                                	<div class="cma-thread-numbers-caption cma-thread-answers-caption"><?php
+
+                                        echo CMA_Labels::n(strtolower(CMA_Labels::getLabel('Answer')), strtolower(CMA_Labels::getLabel('Answers')), $numberOfAnswers);
+
+                                            ?></div></div>
+
+                                </td><?php endif; ?>
+
+                                <td class="cma-thread-summary">
+
+                                    <div class="cma-thread-title"><a href="<?php echo esc_attr(get_permalink($post->ID)); ?>"><?php echo $thread->getTitle(); ?></a></div>
+
+                                    <div class="cma-thread-updated"><?php printf(CMA_Labels::getLocalized('update_on_by'),
+
+                                    	CMA_AnswerThread::renderDaysAgo($thread->getUnixUpdated()), $thread->getLastPosterName()); ?></div>
+                                    <?php if( CMA_Settings::getOption(CMA_Settings::OPTION_INDEX_SHOW_CONTENT) ): ?>
+                                        <?php
+                                        if (CMA_Settings::getOption(CMA_Settings::OPTION_INDEX_SHOW_CONTENT) == 1){
+                                            $content = $thread->getContent();
+                                        } else {
+                                            $content = $thread->getLightContent();
+                                            if ((CMA_Settings::getOption(CMA_Settings::OPTION_QUESTION_FRAGMENT_LENGTH) > 0) && !(CMA_Settings::getOption(CMA_Settings::SHOW_CONTENT_ENTIRE))){
+                                                $maxlen = CMA_Settings::getOption(CMA_Settings::OPTION_QUESTION_FRAGMENT_LENGTH);
+                                                if (strlen($content) > $maxlen) $content = mb_substr($content, 0, $maxlen) . '...';
+                                            }
+                                        }
+                                        ?>
+                                        <?php $class = (CMA_Settings::getOption(CMA_Settings::OPTION_INDEX_CONTENT_UNDER_TITLE)) ? ' clear-none' : '' ; ?>
+                                        <div class="cma-thread-content <?php echo $class; ?>"><?php echo $content; ?></div>
+                                    <?php endif; ?>
+                                </td>
+
+                            </tr>
+
+                            <?php
+
+                        endwhile;
+
+                        ?>
+
+                    </table>
+
+                    <div class="cma-pagination"><?php
+
+                        echo paginate_links(array(
+
+                            'base'     => trailingslashit(get_post_type_archive_link(CMA_AnswerThread::POST_TYPE)) . '%_%',
+
+                            'format'   => 'page/%#%/',
+
+                            'current'  => max(1, get_query_var('paged')),
+
+                            'total'    => $GLOBALS['wp_query']->max_num_pages,
+
+                            'add_args' => isset($currentSort) ? array('sort' => $currentSort) : array()
+
+                        ));
+
+                        ?></div><?php
+
+                endif;
+
+                ?>
+
+                <div class="cma-form-container">
+
+                    <?php if(CMA_AnswerThread::canPostQuestions()): ?>
+
+                        <div style="clear:both;height:40px;"></div>
+
+                        <form method="post" class="cma-thread-add" id="cma-thread-add">
+
+                            <input type="hidden" name="cma-action" value="add" />
+
+                            <input type="hidden" name="nonce" value="<?php echo esc_attr(wp_create_nonce('cma_question')); ?>" />
+
+                            <h3><?php echo CMA_Labels::getLocalized('ask_a_question'); ?></h3>
+
+                            <?php if (CMA_AnswerThread::getMarkupBoxShow()): ?>
+
+	                            <ul class="cma-form-notes">
+
+	                                <li><?php _e('Allow markup', 'cm-answers'); ?>: &lt;strong&gt;, &lt;em&gt;, &lt;a&gt;</li>
+
+	                                <li><?php _e('Wrap your code using', 'cm-answers'); ?> &lt;pre&gt;&lt;/pre&gt;</li>
+
+	                            </ul>
+
+                            <?php endif; ?>
+
+                            <input type="text" size="50" name="thread_title" placeholder="<?php echo CMA_Labels::getLocalized('enter_question_title'); ?>" /><br />
+
+                            <?php if ( CMA_Settings::getOption(CMA_Settings::OPTION_QUESTION_DESCRIPTION_OPTIONAL) ) {
+                                $placeholder = CMA_Labels::getLocalized('enter_question_content_optional');
+                            } else {
+                                $placeholder = CMA_Labels::getLocalized('enter_question_content');
+                            } ?>
+                            <textarea name="thread_comment" cols="50" rows="3" placeholder="<?php echo $placeholder; ?>"></textarea><br />
+
+                            <div style="clear:both;height:5px;"></div>
+
+                            <label>
+
+                                <input name="thread_notify" type="checkbox" value="1"/>
+
+                                <?php echo CMA_Labels::getLocalized('notify_me_of_follow'); ?></label><br />
+
+                            <div style="clear:both;height:10px;"></div>
+
+                            <input type="submit" value="<?php echo CMA_Labels::getLocalized('button_add_question'); ?>" />
+
+                        </form>
+
+                        <?php
+
+                    else:
+
+                        do_action('CMA_login_form');
+
+                    endif;
+
+                    ?>
+
+                </div>
+
+            </div>
+
+            <?php echo do_shortcode('[cminds_free_author id="cma"]'); ?>
+
+
+
+        </div>
+
+	    <?php if( CMA_AnswerThread::isSidebarEnabled() && is_active_sidebar('cm-answers-sidebar') ): ?>
+
+            <?php
+
+            $maxWidth = CMA_AnswerThread::getSidebarMaxWidth() > 0 ? 'style="width:' . CMA_AnswerThread::getSidebarMaxWidth() . 'px"' : '';
+
+            ?>
+
+            <div id="secondary" role="complementary" class="widget-area cma-sidebar" <?php echo $maxWidth; ?>>
+
+                <?php dynamic_sidebar('cm-answers-sidebar'); ?>
+
+            </div>
+
+        <?php endif; ?>
+
+    </div>
+
+</div>
+
+<?php
+
+if ( wp_is_block_theme() ) {
+    echo $footer;
+    wp_footer();
+} else {
+    get_footer();
+}
+

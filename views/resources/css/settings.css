@@ -1,0 +1,54 @@
+@CHARSET "UTF-8";
+
+#tabs {clear: both;}
+.cma-tab-content {position: relative;}
+#cm-downloads-settings-form caption, #cm-downloads-settings-form h3 {color: #222; font: 600 1em verdana; margin: 1em 0; text-align: left;}
+
+.cm-settings-row {padding:10px; border-bottom: solid 1px #f0f0f0;}
+.cm-settings-row:last-child {border-bottom: none}
+
+.cm-settings-row > div {width: 31%; display: inline-block; vertical-align: top;}
+.cm-settings-option-name {text-align: right; line-height: 1.8em; padding-right: 1em;}
+.cm-settings-row input[type=text] {width: 90%; min-width: 100px; max-width: 300px;}
+.cm-settings-row textarea {width: 90%;}
+
+#cm-answers-settings-form select {max-width: 90%;}
+#cm-answers-settings-form #tabs {
+  margin-bottom: 10px;
+}
+#cm-downloads-settings-form .tg-table-plain td, #cm-downloads-settings-form .tg-table-plain th { border: 1px #555 solid; padding: 5px;border-collapse: collapse;text-align: center;vertical-align: middle; }
+
+#cm-downloads-settings-form .cma-tab-content ul {list-style: circle; margin: 1em 0 1em 30px;}
+h4 {font-weight: bold; margin: 2em 0 0.3em 0;}
+.user_groups_container {margin-top:5px; display: none;}
+#authorsAutoApprovedResults {list-style: none; margin: 0 0 0 100px !important; margin-top: -14px; border:solid 1px #ccc; padding:5px !important; width:190px; display: none;}
+#authorsAutoApprovedResults li {list-style: none !important; margin: 0; padding: 0;}
+#authorsAutoApprovedSearch {width: 200px;}
+.cma-warning {border: 1px solid #dddddd; border-left: 4px solid #ff9900; padding: 1em; font-size: 90%; margin: 1em 0;}
+#cm-downloads-settings-form label {margin-right: 2em;}
+#cm-downloads-settings-form .multiline label {display: block; margin-right: 0 !important;}
+.cm-licensing-box {margin-top:-20px; float: left; width: 100%; }
+#cma_settings_search {width: 100%; font-size: 150%; margin: 0 0 1em 0; padding: 0.5em;}
+#cma_settings_search_clear {margin-left: -1em; cursor: pointer; display: none; font-size: 200%;}
+.cma-hl {background: yellow;}
+#cma-tab-menu {font-size: 90%;}
+textarea.cma-custom-css { width: 100%; height: 200px;}
+
+.cm-settings-collapse-close {display: none;}
+.cm-settings-collapse-btn {cursor: pointer; color: #666 !important;}
+.cm-settings-collapse-btn:hover {color: black !important;}
+.cm-settings-collapse-open tbody {display: table-row-group !important;}
+.cm-settings-collapse-toggle {cursor: pointer; color: #666 !important; position: absolute; right: 10px; top: 5px; font-size: 90%;}
+
+#cm-downloads-settings-form .button-primary { font-size: 1.2em; padding: 0.3em 1.5em; height: 2.5em; margin-top: 1em; font-weight: bold !important; }
+
+.cma-mp-badge-item {padding-bottom: 0.5em;}
+.cma-mp-badge-item input[type=number] {width: 5em;}
+.cma-mp-badge-item ul, .cma-mp-badge-item li {list-style: none; margin: 0; padding: 0;}
+.cma-mp-badge-item ul {margin: 0 0 0 2em !important;}
+.cma-mp-badges-list .cma-mp-badge-add {margin-top: 1em;}
+.cma-mp-badge-remove {margin-left: 0.5em;}
+.cma-mp-badge-item[data-badge="0"] .cma-mp-badge-remove {display: none;}
+.cma-mp-badge-item[data-badge="1"] .cma-mp-badge-remove {display: none;}
+.cma-mp-badge-item img {max-width: 20px; max-height: 20px; vertical-align: middle; margin: 0 !important;}
+.cma-mp-badge-item-header {background: #e0e0e0; padding: 0.3em 0.5em;}

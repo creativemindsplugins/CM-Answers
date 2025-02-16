@@ -1,0 +1,220 @@
+Questions	Questions	The single "Questions" word occurrences.	General
+Question	Question	The single "Question" word occurrences.	General
+Answers	Answers	The single "Answers" word occurrences.	General
+Answer	Answer	The single "Answer" word occurrences.	General
+index_page_title	Questions	Index page title.	General
+delete	Delete	Delete link text	General
+delete	Cancel	Cancel link text	General
+at	at	at text	General
+
+failed_to_add_answer	Failed to add answer.	Error message.	Thread
+mark_as_best_answer	Mark as best answer	Appears on the link to mark the best answer.	Thread
+unmark_best_answer	Unmark best answer	Appears on the link to unmark the best answer.	Thread
+best_answer_remove_other_confirm	Do you want to remove other answers (instead of the best)? Press OK if yes, press Cancel if no.	Confirmation message when marking best answer if the removing option is enabled.	Thread
+best_answer	Best answer	Appears next to best answer.	Thread
+favorite_for_users	Favorite for %d users	Displays the number of users which marked question as favorite.	Thread
+edit_your_answer	Edit your Answer	Appears above the answer form when editing.	Thread
+edit_your_question	Edit your Question	Appears above the question form when editing.	Thread
+add_comment_link	Add comment	Text on the link to add new comment.	Thread
+add_comment_button	Add comment	Text on the button to post new comment.	Thread
+save_comment_button	Save comment	Text on the button to save edited comment.	Thread
+anonymous_comment	Anonymous comment	Text on the checkbox to comment anonymously.	Thread
+asked_on	Asked on %s	Appears on the question meta box to show posting date. Remember to add %s which will be replaced by date.	Thread
+asked_on_by	asked %s by %s	Appears next to the question on questions index. First occurence of the %s is date, second %s is author name.	Thread
+answered_on	Answered on %s	Appears on the answer meta box to show posting date. Remember to add %s which will be replaced by date.	Thread
+update_on_by	updated %s by %s	Appears next to the question on questions index. First occurence of the %s is date, second %s is author name.	Thread
+update_on	updated %s	Appears next to the question on questions index. Occurence of the %s is date.	Thread
+RESOLVED	RESOLVED	Label for the RESOLVED flag which appears next to the resolved question.	Thread
+private_answer_flag	Private answer	Label for the private answer.	Thread
+votes_col	Votes	Label for the "Votes" column on the questions table.	Thread
+views_col	Views	Label for the "Views" column on the questions table.	Thread
+status_col	Status	Label for the "Status" column on the questions table.	Thread
+questions_col	Questions	Label for the "Questions" column.	Thread
+answers_header	Answers	Label for the "Answers" column on the questions table.	Thread
+votes	votes	Label for the "votes" label.	Thread
+vote	vote	Label for the "vote" label.	Thread
+views	views	Label for the "views" label.	Thread
+view	view	Label for the "view" label.	Thread
+thread_user_related_questions	Related questions	Label for the user's related questions section.	Thread
+thread_ref_id	Question ID:	Label for the question referal number (ID).	Thread
+thread_resolved_success	Thread has been marked as resolved.	Success message after marking thread as resolved.	Thread
+thread_resolved_failure	Your wallet has insufficient balance so you cannot marked as resolved.	Failure message after marking thread as resolved.	Thread
+anonymous_user_nickname	Anonymous	Anonymous user nickname.	Thread
+thread_attachments	Attachments	Attachments in thread.	Thread
+no_answers	No answers.	No answers text on the thread page.	Thread
+answers_wrapper_header		Header before the answers list on the thread page.	Thread
+question_stage	Question stage:	Question stage	Thread
+question_stage_set	Set stage:	Set question stage	Thread
+question_stage_filter_none	All stages	All stages filter option in the nav bar.	Thread
+delete_my_submissions	Delete my submissions	Delete my submissions.	Thread
+really_delete_your_submissions	Really delete your submissions ?	Really delete your submissions.	Thread
+this_action_cannot_be_undone	This action cannot be undone.	This action cannot be undone.	Thread
+delete_my_questions_current	Delete my questions (current: %s)	Delete my questions (current: %s)	Thread
+delete_my_answers_current	Delete my answers (current: %s)	Delete my answers (current: %s)	Thread
+cma_delete_yes	Yes	Yes	Thread
+cma_delete_no	No	No	Thread
+please_wait_processing_delete	Please wait. Delete Process started.	Please wait. Delete Process started.	Thread
+submissions_have_been_delete	Submissions have been deleted.	Submissions have been deleted.	Thread
+cma_thank_you_for_voting	Thank you for voting!	Message is shown after successful voting.	Thread
+cma_you_cannot_vote	You have to be logged-in to vote.	Message is shown after failed voting.	Thread
+cma_you_cannot_vote_again	You cannot vote again.	Message is shown when user already voted.	Thread
+cma_delete_ok	OK	OK	Thread
+cma_comment_added	Comment has been added.	Comment has been added.	Thread
+cma_comment_moved_to_trash	Comment moved to trash.	Comment moved to trash.	Thread
+tags	Tags:	tags text	Thread
+cma_min_answer_words	Minimum amount of words: %s	Required minimum amount of words in the answer	Thread
+cma_max_answer_hyperlinks	Maximum amount of hyperlinks: %s	Maximum allowed amount of hyperlinks in the answer	Thread
+second_ago	1 second ago	Label for the time elapsed since the post/update.	Thread
+seconds_ago	%d seconds ago	Label for the time elapsed since the post/update. %d - number of seconds.	Thread
+minute_ago	1 minute ago	Label for the time elapsed since the post/update.	Thread
+minutes_ago	%d minutes ago	Label for the time elapsed since the post/update. %d - number of minutes.	Thread
+hour_ago	1 hour ago	Label for the time elapsed since the post/update.	Thread
+hours_ago	%d hours ago	Label for the time elapsed since the post/update. %d - number of hours.	Thread
+day_ago	1 day ago	Label for the time elapsed since the post/update.	Thread
+days_ago	%d days ago	Label for the time elapsed since the post/update. %d - number of days.	Thread
+week_ago	1 week ago	Label for the time elapsed since the post/update.	Thread
+weeks_ago	%d weeks ago	Label for the time elapsed since the post/update. %d - number of weeks.	Thread
+month_ago	1 month ago	Label for the time elapsed since the post/update.	Thread
+months_ago	%d months ago	Label for the time elapsed since the post/update. %d - number of months.	Thread
+year_ago	1 year ago	Label for the time elapsed since the post/update.	Thread
+years_ago	%d years ago	Label for the time elapsed since the post/update. %d - number of years.	Thread
+
+ask_a_question	Ask a Question	Appears above the question form when adding new question.	Posting
+post_your_answer	Post your Answer	Appears above the answer form when adding new question.	Posting
+enter_question_title	Enter your basic question	Placeholder for question title input field.	Posting
+enter_question_content	Enter more details about your question	Placeholder for question content input field.	Posting
+enter_question_content_optional	Enter more details about your question (optional)	Placeholder for optional question content input field.	Posting
+answer_input_label	Write your Answer here	Label for the answer input field.	Posting
+notify_me_of_follow	Notify me of follow	Label for the option to notify user about new answers.	Posting
+ask_anonymously	Ask anonymously	Label for the option to ask anonymously.	Posting
+for_admin_only	For admin only	Label for the option to for admin only about new question.	Posting
+notifications_period	Notification period	Label for the option to notifications period about new question.	Posting
+anonymous_nickname_field	Anonymous nickname:	Option to post question anonymously.	Posting
+mark_as_resolved	Mark as resolved	Label for the option to resolve thread on posting answer.	Posting
+private_answer	Private answer	Label for the option on the answer form to post answer as a private (visible only for the author of the question).	Posting
+choose_category	Choose category	Placeholder for the dropbox to choose category when posting a question.	Posting
+choose_category_label	Choose category	Label for the categories fields on the question form.	Posting
+user_related_questions_input_label	Related questions:	Label for the user's related questions input.	Posting
+user_related_questions_input_placeholder	Enter related questions links or ids separated by new line.	Label for the user's related questions input placeholder.	Posting
+msg_content_includes_bad_word	Cannot post content because of bad word: %s	Error message when posting a content containing a bad word.	Posting
+msg_tag_includes_bad_word	Cannot post tag because of bad word: %s	Error message when posting a tag containing a bad word.	Posting
+msg_post_question_success	New question has been succesfully added.	Success message when the question has been posted.	Posting
+msg_post_question_success_not_visible	New question has been succesfully added but currently it's not visible.	Success message when the question has been posted but it's not visible for current user.	Posting
+msg_post_question_moderation	Thank you for your question, it has been held for moderation.	Success message when the question has been posted but waiting for moderation.	Posting
+msg_post_question_uniq_error	The same question has been already posted. Please use the "Search" option.	Error when posted same question as existing.	Posting
+msg_cannot_post_question	You cannot post questions.	Error message when user has no permission to post question.	Posting
+msg_cannot_post_question_category	You cannot post questions in this category.	Error message when user has no permission to post question in specific category.	Posting
+drag_attachments_here	Drag and drop attachments here	Upload attachments label.	Posting
+attachments_drop_here	Drop files here	Drop attachments label.	Posting
+attachments_allowed_file_types	Allowed file types	Allowed file types for attachment.	Posting
+attachment_max_file_size	Max file size	Max file size for attachment.	Posting
+attachment_delete_confirm_msg	Are you sure?	Confirmation message when deleting an attachment.	Posting
+error_question_title_too_long	Question title is too long. Max length is %d characters.	Too long question title error message.	Posting
+error_question_content_too_long	Question description is too long. Max length is %d characters.	Too long question content error message.	Posting
+error_comment_content_too_long	Comment content is too long. Max length is %d characters.	Too long comment content error message.	Posting
+error_answer_content_too_long	Answer content is too long. Max length is %d characters.	Too long answer content error message.	Posting
+error_cannot_post_comments	You cannot post comments.	Cannot post comments error.	Posting
+add_answer_success	Your answer has been successfully added.	Added answer message.	Posting
+add_answer_held_for_moderation	Thank you for your answer, it has been held for moderation.	Answer held for moderation.	Posting
+question_validation_category_required_error	Category cannot be empty	Category cannot be empty error.	Posting
+question_validation_must_be_subcategory_error	You can post questions only in the subcategoties.	User can post questions only in the subcategoties error.	Posting
+cma_content_cannot_be_empty	Content cannot be empty	Translation instead Content cannot be empty	Posting
+cma_file_is_too_large	File is too large	Translation instead File is too large	Posting
+cma_choose_the_filter_option	Choose the filter options and click the submit button	Translation instead Choose the filter options and click the submit button	Posting
+cma_thread_has_been_deleted	Thread has been deleted.	Translation instead Thread has been deleted.	Posting
+cma_do_you_really_want_delete_question	Do you really want to delete this question?	Translation instead Do you really want to delete this question?	Posting
+cma_do_you_really_want_resolve_thread	Do you really want to resolve this thread?	Translation instead Do you really want to resolve this thread?	Posting
+cma_edit_button_answer	Edit	Translation instead Edit button	Posting
+cma_posted_by_label	Posted by	Translation instead Posted by	Posting
+cma_question_has_been_saved_label	Question has been saved.	Translation instead Question has been saved.	Posting
+
+send_private_question	Send private question	Label on the link next to user name to send him a private question.	Private question
+send_private_question_to	Send private question to %s	Label on the form to specyfy user which will receive a private question.	Private question
+private_question_enter_title	Enter your question title	Placeholder for the private question title.	Private question
+private_question_enter_content	Enter more details about your question	Placeholder for the private question content.	Private question
+button_send_private_question	Send	Label on the button to send a private question.	Private question
+button_cancel_private_question	Cancel	Label on the button to cancel posting a private question.	Private question
+private_question_sent_success	Private question has been sent.	Success message after a private question was sent.	Private question
+
+button_post_your_answer	Post your Answer	Appears on the posting answer button.	Buttons
+button_edit_your_answer	Edit your Answer	Appears on the editing answer button.	Buttons
+button_add_question	Add Question	Appears on the adding question button.	Buttons
+button_edit_question	Save	Appears on the editing question button.	Buttons
+answer_question	Answer Question	Appears on the question page for direct go to answer form.	Buttons
+
+orderby_newest	Newest	Appears on the Newest sorting link.	Sorting
+orderby_oldest	Oldest	Appears on the Oldest sorting link.	Sorting
+orderby_hottest	Hottest	Appears on the Hottest sorting link.	Sorting
+orderby_votes	Most votes	Appears on the Most votes sorting link.	Sorting
+orderby_views	Most views	Appears on the Most views sorting link.	Sorting
+orderby_highest_rating	Highest Rating	Appears on the Highest Rating sorting link.	Sorting
+orderby_lowest_rating	Lowest Rating	Appears on the Lowest Rating sorting link.	Sorting
+
+all_categories	All categories	Appears on the category select box of the navigation bar.	Navigation
+all_subcategories	All subcategories	Appears on the subcategory select box.	Navigation
+select_subcategory	Select subcategory	Appears on the subcategory select box when selecting the subcategory is required.	Navigation
+all_questions	All questions	The "All questions" occurrences.	Navigation
+all_levels	All levels	The "All levels" occurrences.	Navigation
+answered_questions	Answered questions	The "Answered questions" occurrences.	Navigation
+unanswered_questions	Unanswered questions	The "Unanswered questions" occurrences.	Navigation
+back_full_questions_list	Back to Full Questions List	Link to return back to the questions list after searching or filtering.	Navigation
+search_questions	Search Questions...	Label for the search input.	Navigation
+back_to_previous_page	Back to Previous Page	Label for the "Back to Previous Page" link.	Navigation
+nav_bar_submit_btn	>	Submit button label for the navigation bar.	Navigation
+
+Follow	Follow	Label for thread follow button.	Following
+Unfollow	Unfollow	Label for thread unfollow button.	Following
+follow_success	You have been added to the followers of this thread.	Message on enabling thread notifications.	Following
+unfollow_success	You have been removed from the followers of this thread.	Message on disabling thread notifications.	Following
+follow_category	Follow category	Label for category follow button	Following
+unfollow_category	Unfollow category	Label for category unfollow button	Following
+follow_category_header	Follow category	Label for the column header for the follow button.	Following
+follow_category_success	You have been added to the followers of this category.	Message on enabling category notifications.	Following
+unfollow_category_success	You have been removed from the followers of this category.	Message on disabling category notifications.	Following
+dashboard_followed	Followed threads and categories	Title of the user's dashboard with followed threads and categories.	Following
+dashboard_followed_threads	Followed threads	Header of the followed threads in the user's dashboard.	Following
+dashboard_followed_categories	Followed categories	Header of the followed categories in the user's dashboard.	Following
+unfollow_new_threads	Unfollow all new threads	Label for the button to disable following new questions.	Following
+follow_new_threads	Follow all new threads	Label for the button to enable following new questions.	Following
+
+report_spam	Report spam	Text on the "Report spam" link.	Spam reporting
+spam_report_sent	Thank you! Spam report has been sent.	Message after successful spam report was send.	Spam reporting
+thread_marked_spam	Marked as spam	Message on thread when marked as spam.	Spam reporting
+answer_marked_spam	Marked as spam	Message on answer when marked as spam.	Spam reporting
+unmark_as_spam	Unmark spam	Unmark content as a spam.	Spam reporting
+unmarked_as_spam	Content has been unmarked as a spam.	Content has been unmarked as a spam.	Spam reporting
+
+category	Category	Category label.	Categories
+category_name_header	Category name	Header for the category name column.	Categories
+unanswered_header	Unanswered	Label for the column header for number of unanswered questions in category.	Categories
+last_activity_header	Last activity	Label for the column header for last activity date for category.	Categories
+category_table_experts_col	Experts	Experts column in the categories table shortcode.	Categories
+
+difficulty_level	Difficulty level	Category label.	Difficulty levels
+
+please_login_to_optout_newsletter	Please log in to opt-out the newsletter.	Appears on the newsletter's opt-out page when user is not logged-in.	Newsletter
+newsletter_optout_success	You have been successfully removed from newsletter.	Message appears when user opt-out the newsletter.	Newsletter
+newsletter_optout_disabled	The opt-out function is disabled by admin.	Message appears when user is trying to opt-out the newsletter but the option is disabled.	Newsletter
+newsletter_page_title	Opt-out from newsletter	Newsletter's page title	Newsletter
+newsletter_new_therads_disabled_success	The new threads newsletter has been disabled.	Message appears when user disabled the new thread following on the CMA page.	Newsletter
+newsletter_new_therads_enabled_success	The new threads newsletter has been enabled.	Message appears when user enabled the new thread following on the CMA page.	Newsletter
+
+bp_activity_user_answered_to_question	%s answered to the question "%s"	Activity stream status: User answered to a question.	BuddyPress
+bp_activity_user_asked_question	%s asked a new question: %s	Activity stream status: User asked a question.	BuddyPress
+bp_notification_answer_in_thread	Answer in thread %s	Answer in thread	Notification: answer in thread.	BuddyPress
+
+please_login_to_post_questions	Please log in to post questions/answers	Appears instead of the question form, on the login widget when user is not logged-in.	Other
+register_link	Register	Register link on the login form.	Other
+login_form_social_login	Social Login via	Social login links on the login form.	Other
+no_questions_found	No questions found.	Appears when no questions found in the category or search.	Other
+no_permissions	You do not have permissions to see this page.	Appears when user or guest is trying to open restricted page (eg. for logged-in users only).	Other
+no_tags	No tags.	Appears when no tags to display.	Other
+add_tags_placeholder	Add tags	Add tags field's placeholder text.	Other
+disclaimer_accept_btn	Accept Terms	Disclaimer accept button that will appear in the disclaimer.	Other
+disclaimer_reject_btn	Reject Terms	Disclaimer reject button that will appear in the disclaimer.	Other
+lost_password_link	Lost password?	Lost password link.	Other
+no_answers_label	Be first to answer!	Appears when question has no answer.	Other
+no_questions_avaliable	No questions avaliable for you.	Appears when you do not have a permission to view the content.	Other
+no_answers_avaliable	No answers avaliable for you.	Appears when you do not have a permission to view the content.	Other
+read_more	(more)	"Read More" label for a recent post.	Other
+um_custom_tab_label	CMA Questions	Label for Ultimate Member "CMA Questions" custom tab.	Other
